@@ -89,7 +89,7 @@ export default function LoadingAnimation() {
               initial={{ scaleY: 1 }}
               animate={{ scaleY: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="absolute inset-0 origin-top bg-black"
+              className="absolute inset-0 origin-top"
             />
           </div>
 
@@ -111,4 +111,3 @@ export default function LoadingAnimation() {
     </motion.div>
   )
 }
-
