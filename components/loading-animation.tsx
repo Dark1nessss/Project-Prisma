@@ -30,9 +30,9 @@ export default function LoadingAnimation() {
           LOADING
         </motion.span>
 
-        <div className="relative h-32 w-32">
-          {/* Rotating circles */}
-          <motion.div
+        <div className="relative h-56 w-56">
+          {/* Rotating circles Needs improvement */}
+          {/* <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Number.POSITIVE_INFINITY }}
             className="absolute inset-0"
@@ -66,7 +66,7 @@ export default function LoadingAnimation() {
               className="absolute left-1/2 top-0 h-1 w-1 -translate-x-1/2 rounded-full bg-yellow-400/30"
               style={{ transform: "rotate(315deg) translateY(-16px) translateX(0px)" }}
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Logo Text Animation */}
           <div className="relative h-full w-full">
@@ -106,49 +106,6 @@ export default function LoadingAnimation() {
             }}
             className="absolute -inset-4 rounded-full border border-yellow-400/30"
           />
-        </div>
-
-        {/* Photography-related words */}
-        <div className="absolute inset-0 -z-10">
-          <motion.div
-            animate={{
-              opacity: [0, 0.1, 0],
-              rotate: 360,
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-            className="absolute inset-0"
-          >
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-light tracking-wider text-yellow-400/20"
-                style={{
-                  transform: `rotate(${i * 30}deg) translateY(-120px)`,
-                }}
-              >
-                {
-                  [
-                    "CAPTURE",
-                    "MOMENT",
-                    "FRAME",
-                    "LIGHT",
-                    "FOCUS",
-                    "LENS",
-                    "VISION",
-                    "CREATE",
-                    "STORY",
-                    "IMAGE",
-                    "SHUTTER",
-                    "ART",
-                  ][i]
-                }
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </motion.div>
