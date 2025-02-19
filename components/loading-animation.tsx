@@ -32,7 +32,7 @@ export default function LoadingAnimation() {
 
         <div className="relative h-56 w-56">
           {/* Rotating circles Needs improvement */}
-          {/* <motion.div
+          <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Number.POSITIVE_INFINITY }}
             className="absolute inset-0"
@@ -66,7 +66,11 @@ export default function LoadingAnimation() {
               className="absolute left-1/2 top-0 h-1 w-1 -translate-x-1/2 rounded-full bg-yellow-400/30"
               style={{ transform: "rotate(315deg) translateY(-16px) translateX(0px)" }}
             />
-          </motion.div> */}
+            <div
+              className="absolute left-1/2 top-0 h-1 w-1 -translate-x-1/2 rounded-full bg-yellow-400/30"
+              style={{ transform: "rotate(355deg) translateY(-16px) translateX(0px)" }}
+            />
+          </motion.div>
 
           {/* Logo Text Animation */}
           <div className="relative h-full w-full">
