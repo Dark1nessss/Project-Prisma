@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 51 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    cursor: none !important;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-black text-foreground;
+  }
+}
+
+@layer components {
+  .magnetic-link {
+    @apply relative inline-block;
+  }
+
+  .magnetic-link::after {
+    content: "";
+    @apply absolute -inset-4 -z-10 rounded-full bg-yellow-400/0 transition-colors duration-300;
+  }
+
+  .magnetic-link:hover::after {
+    @apply bg-yellow-400/10;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal {
+    animation: reveal 0.8s ease-out forwards;
+  }
+
+  .reveal-delay-1 {
+    animation-delay: 0.2s;
+  }
+
+  .reveal-delay-2 {
+    animation-delay: 0.4s;
+  }
+
+  .reveal-delay-3 {
+    animation-delay: 0.6s;
+  }
+}
+
