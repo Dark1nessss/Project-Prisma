@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 
@@ -30,6 +29,18 @@ export default function MagneticLink({ children, className = "", href = "#" }: M
     setPosition({ x: 0, y: 0 })
   }
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = href.replace("#", "")
+    const element = document.getElementById(targetId)
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
   return (
     <motion.a
       ref={ref}
@@ -37,6 +48,7 @@ export default function MagneticLink({ children, className = "", href = "#" }: M
       className={`magnetic-link ${className}`}
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15 }}
     >
@@ -44,4 +56,3 @@ export default function MagneticLink({ children, className = "", href = "#" }: M
     </motion.a>
   )
 }
-
