@@ -83,7 +83,7 @@ export default function ScrollReveal({
             },
           },
         }
-      default: // fade
+      default:
         return {
           hidden: { opacity: 0, y: 20 },
           visible: {
