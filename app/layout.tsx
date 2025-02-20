@@ -8,7 +8,7 @@ import CustomCursor from "@/components/custom-cursor"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Project-Prisma",
+  title: "Project-Prism",
   icons: {
     icon: '/Yellow_Prism.png'
   }
