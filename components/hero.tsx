@@ -15,13 +15,13 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length)
-    }, 8000) // Change image every 8 seconds
+    }, 8000)
 
     return () => clearInterval(timer)
   }, [])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section id="hero" className="relative h-screen w-full overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0 bg-black">
         <AnimatePresence mode="wait">
@@ -52,14 +52,14 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="relative z-10 flex h-full items-center justify-center"
+        className="relative z-10 flex h-full items-center justify-center px-4"
       >
         <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="font-display text-7xl font-bold tracking-wider text-white md:text-9xl"
+            className="font-display text-4xl font-bold tracking-wider text-white sm:text-6xl md:text-7xl lg:text-9xl"
           >
             YELLOW
             <motion.span
@@ -75,7 +75,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="mt-4 text-xl tracking-[0.2em] text-white/80"
+            className="mt-4 text-base tracking-[0.2em] text-white/80 sm:text-lg md:text-xl"
           >
             COMMERCIAL & EVENT PHOTOGRAPHY
           </motion.p>
@@ -83,11 +83,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.7 }}
-            className="mt-8"
+            className="mt-6 sm:mt-8"
           >
             <MagneticLink
               href="#contact"
-              className="rounded-full bg-yellow-400 px-8 py-3 text-sm font-medium text-black transition-colors hover:bg-yellow-300"
+              className="rounded-full bg-yellow-400 px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-yellow-300 sm:px-8 sm:py-3"
             >
               Get in Touch
             </MagneticLink>
@@ -117,4 +117,3 @@ export default function Hero() {
     </section>
   )
 }
-
