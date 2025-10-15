@@ -79,10 +79,10 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="mb-12 text-center md:mb-16"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-wrap md:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Our
             <span className="relative mx-2 md:mx-4">
-              <span className="relative text-wrap z-10 text-yellow-400">Portfolio</span>
+              <span className="relative z-10 text-yellow-400">Portfolio</span>
               <motion.svg
                 width="100%"
                 height="12"
