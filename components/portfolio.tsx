@@ -81,7 +81,7 @@ export default function Portfolio() {
         >
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Our
-            <span className="relative mx-2 md:mx-4">
+            <span className="relative mx-2 inline-block md:mx-4">
               <span className="relative z-10 text-yellow-400">Portfolio</span>
               <motion.svg
                 width="100%"
