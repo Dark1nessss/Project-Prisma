@@ -82,7 +82,9 @@ export default function Portfolio() {
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Our
             <span className="relative mx-2 inline-block md:mx-4">
-              <span className="relative z-10 text-yellow-400">Portfolio</span>
+              <span className="relative z-10 text-yellow-400">
+                Portfolio
+              </span>
               <motion.svg
                 width="100%"
                 height="12"
@@ -173,10 +175,10 @@ export default function Portfolio() {
                 </motion.div>
 
                 {/* Corners */}
-                <div className="absolute left-4 top-4 h-6 w-6 border-l-2 border-t-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:h-8 md:w-8" />
-                <div className="absolute right-4 top-4 h-6 w-6 border-r-2 border-t-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:h-8 md:w-8" />
-                <div className="absolute bottom-4 left-4 h-6 w-6 border-b-2 border-l-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:h-8 md:w-8" />
-                <div className="absolute bottom-4 right-4 h-6 w-6 border-b-2 border-r-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:h-8 md:w-8" />
+                <div className="absolute left-2 top-2 h-6 w-6 border-l-2 border-t-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:left-4 md:top-4 md:h-8 md:w-8" />
+                <div className="absolute right-2 top-2 h-6 w-6 border-r-2 border-t-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:right-4 md:top-4 md:h-8 md:w-8" />
+                <div className="absolute bottom-2 left-2 h-6 w-6 border-b-2 border-l-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:bottom-4 md:left-4 md:h-8 md:w-8" />
+                <div className="absolute bottom-2 right-2 h-6 w-6 border-b-2 border-r-2 border-yellow-400/0 transition-all duration-300 group-hover:border-yellow-400/100 md:bottom-4 md:right-4 md:h-8 md:w-8" />
               </motion.div>
             ))}
           </motion.div>

@@ -29,20 +29,6 @@ export default function LoadingAnimation() {
       />
 
       <div className="relative flex flex-col items-center">
-        {/* Top decorative elements */}
-        <div className="absolute -top-32 flex w-full items-center justify-center">
-          <motion.div
-            animate={{
-              width: ["0%", "100%", "0%"],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-            className="h-[1px] bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent"
-          />
-        </div>
 
         {/* Loading progress bar with enhanced glow */}
         <motion.div
@@ -67,7 +53,7 @@ export default function LoadingAnimation() {
               repeatType: "loop",
               times: [0, 0.2, 0.8, 1]
             }}
-            className="text-sm tracking-[0.3em] text-yellow-400/50"
+            className="font-display text-md tracking-[0.3em] text-yellow-400/50"
           >
             LOADING
           </motion.span>
@@ -290,7 +276,7 @@ export default function LoadingAnimation() {
         </div>
 
         {/* Bottom decorative elements */}
-        <div className="absolute -bottom-24 flex w-full flex-col items-center gap-4">
+        <div className="absolute -bottom-20 flex w-full flex-col items-center gap-4">
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
